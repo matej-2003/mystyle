@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+        }
+
+        td,
+        tr {
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 5px;
+        }
+        
+        table.selectable tr.selected {
+            background-color: #e3e9ff;
+        }
+
+        table.selectable tr:not(.toolbar):hover {
+            background-color: #d3dbff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toolbar" for="table1">
+    </div>
+    <table class="selectable" id="table1">
+        <tr>
+            <td><input type="checkbox" name="1"></td>
+            <td>Grand Hotel New York</td>
+            <td>$100.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="3"></td>
+            <td>Geneva Hotel Contnetal</td>
+            <td>$250.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="4"></td>
+            <td>Modern villa outside London</td>
+            <td>$120.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="8"></td>
+            <td>Gold</td>
+            <td>$100.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="11"></td>
+            <td>Palladium</td>
+            <td>$100.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="13"></td>
+            <td>Copper</td>
+            <td>$8.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="15"></td>
+            <td>Aluminium</td>
+            <td>$8.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="16"></td>
+            <td>Greywacke Statue Tribute to Isis</td>
+            <td>$6,000.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="21"></td>
+            <td>Napoleon's Gold-Encrusted Sword</td>
+            <td>$500.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="25"></td>
+            <td>Starry Night</td>
+            <td>$800.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="26"></td>
+            <td>Guernica</td>
+            <td>$800.00</td>
+        </tr>
+    </table>
+
+    <script src="./selectable_table.js"></script>
+</body>
+
+</html>

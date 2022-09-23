@@ -1,0 +1,181 @@
+a.btn {
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.btn {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+
+	user-select: none;
+	cursor: pointer;
+	border: 1px solid transparent;
+
+	color: #495057;
+	background-color: #efefef;
+    border: 1px solid #ced4da;
+	
+	background-clip: padding-box;
+	box-sizing: border-box;
+	padding: 0.2em 0.4em;
+	border-radius: 0.1rem;
+	margin: 0.3em 0em;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.btn:focus {
+	outline: 0;
+	/* outline-color: currentcolor; */
+	border-color: var(--ibc);
+    box-shadow: 0 0 0 0.2rem var(--ibc-shadow);
+}
+
+.btn.noshadow:focus {
+	outline: 0;
+	border-color: none;
+    box-shadow: none;
+}
+
+.btn:hover {
+	background-color: #ddd;
+}
+
+.btn.active {
+	background-color: #ddd;
+}
+
+
+.btn.disabled,
+.btn.disabled:hover {
+	opacity: 0.5;
+}
+
+.btn:not(:disabled):not(.disabled) {
+	cursor: pointer;
+}
+
+.btn.primary {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+.btn.primary:hover {
+    background-color: #0069d9;
+}
+
+.btn.primary:focus {
+	box-shadow: 0 0 0 0.2rem #007bff50;
+}
+
+.btn.secondary {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.btn.secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn.secondary:focus {
+	box-shadow: 0 0 0 0.2rem #6c757d50;
+}
+
+.btn.success {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.btn.success:hover {
+    background-color: #218838;
+}
+
+.btn.success:focus {
+	box-shadow: 0 0 0 0.2rem #28a74550;
+}
+
+.btn.danger {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+.btn.danger:hover {
+    background-color: #c82333;
+}
+
+.btn.danger:focus {
+	box-shadow: 0 0 0 0.2rem #dc354550;
+}
+
+.btn.warning {
+	color: #000;
+	background-color: #ffc107;
+	border-color: #ffc107;
+}
+
+.btn.warning:hover {
+    background-color: #efb300;
+}
+
+.btn.warning:focus {
+	box-shadow: 0 0 0 0.2rem #ffc10750;
+}
+
+
+.btn.link {
+	font-weight: 400;
+	color: #007bff;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.btn.link:hover {
+	text-decoration: underline;
+	border-color: transparent;
+}
+
+.btn-group {
+	position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.btn-group > .btn {
+	border-radius: 0;
+}
+
+.btn-group > .btn:not(:last-child) {
+	border-right: 0;
+}
+
+.btn-group > .btn:last-child {
+	border-top-right-radius: 0.1rem;
+	border-bottom-right-radius: 0.1rem;
+}
+
+.btn-group > .btn:first-child {
+	border-top-left-radius: 0.1rem;
+	border-bottom-left-radius: 0.1rem;
+}
+
+.btn-group>.btn:active,
+.btn-group>.btn:focus
+
+{
+    z-index: 1;
+}
+
+.btn-group>.btn:not(.primary):not(.secondary):not(.success):not(.danger):not(.warning):active + .btn,
+.btn-group>.btn:not(.primary):not(.secondary):not(.success):not(.danger):not(.warning):focus + .btn
+{
+	border-left: 1px solid var(--ibc);
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}

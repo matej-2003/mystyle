@@ -1,0 +1,89 @@
+.insert_symbol .insert_symbol {
+	background: #eee;
+	padding: 0.5em;
+	border-radius: 0.2em;
+	width: 39em
+}
+
+.insert_symbol .toolbar {
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #999;
+}
+
+.insert_symbol .selector {
+	padding-top: 0.5em;
+	display: grid;
+	grid-template-columns: auto max-content;
+}
+
+.insert_symbol .symbol_list {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: start;
+	justify-content: start;
+	gap: 0.1em;
+	padding: 0em 0.2em;
+}
+
+.insert_symbol .selector .symbol_list {
+	max-height: 14em;
+	overflow-y: auto;
+}
+
+.insert_symbol .symbol {
+	width: 1.5em;
+	height: 1.5em;
+	background-color: #ddd;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+.insert_symbol .selector {
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #999;
+}
+
+.insert_symbol .preview input {
+	width: 5rem;
+}
+
+.insert_symbol .preview {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-left: 1px solid #999;
+	padding-left: 0.5em;
+}
+
+.insert_symbol .preview .selected_symbol {
+	width: max-content;
+	min-width: 5rem;
+	height: 5rem;
+	font-size: 4rem;
+	background-color: #ddd;
+	border: 1px solid #aaa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.insert_symbol .other {
+	padding-top: 0.5em;
+}
+
+.insert_symbol .buttons {
+	text-align: end;
+}
+
+.insert_symbol .symbol:hover {
+	background-color: #aeb3ff;
+}
+
+.insert_symbol .symbol:active {
+	background-color: #2563ff;
+	color: #fff;
+}

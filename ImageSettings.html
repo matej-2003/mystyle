@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/input.css">
+	<link rel="stylesheet" href="./css/btn.css">
+	<link rel="stylesheet" href="./css/modal.css">
+	<title>Document</title>
+	<style>
+/*
+		.image_settings {
+			display: inline-block;
+			border-radius: 0.2em;
+			padding: 0.2em;
+			border: 1px solid #bbb;
+		}
+		
+		.image_settings:hover {
+			background-color: #ddd;
+		}
+
+		.image_settings img {
+			display: block;
+			border-radius: 0.2em;
+		}
+		.image_settings img:hover {
+			filter: brightness(140%);
+		}
+*/
+
+		img.image_settings:hover {
+			filter: brightness(140%);
+		}
+
+		img.image_settings:active {
+			filter: brightness(160%);
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<img class="image_settings" src="./images/image2.png">
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="./js/Modal.js"></script>
+	<script src="./js/ImageEditor.js"></script>
+	<script src="./js/ImageSettings.js"></script>
+	<script>
+		/*
+		let ie = new ImageEditor(true);
+		let ism = new Modal(ie.html);
+
+		$('div.content').append(ism.modal);
+
+		$('.image_settings').click(() => ism.start());
+		*/
+	</script>
+</body>
+</html>

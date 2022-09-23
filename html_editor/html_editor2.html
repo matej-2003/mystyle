@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/btn.css">
+	<link rel="stylesheet" href="../css/input.css">
+	<link rel="stylesheet" href="../css/modal.css">
+	<style>
+		.html_editor {
+			padding: 1em;
+			background-color: #f9f9f9;
+			border: 1px solid #ddd;
+			border-radius: 0.3em;
+			background-clip: padding-box;
+		}
+
+		select,
+		input {
+			display: inline-block;
+			width: max-content;
+			margin-right: 0.5em;
+		}
+
+		a.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 2.5em;
+			width: 2.5em;
+		}
+
+		a img {
+			width: 16px;
+			height: 16px;
+		}
+	</style>
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="html_editor">
+		<div class="toolbar">
+			<div class="toolbar2"><select>
+					<option selected="selected">-style-</option>
+					<option value="h1"><img src="../images/icons/text_heading_1.png"> h1</option>
+					<option value="h2"><img src="../images/icons/text_heading_2.png"> h2</option>
+					<option value="h3"><img src="../images/icons/text_heading_3.png"> h3</option>
+					<option value="h4"><img src="../images/icons/text_heading_4.png"> h4</option>
+					<option value="h5"><img src="../images/icons/text_heading_5.png"> h5</option>
+					<option value="h6"><img src="../images/icons/text_heading_6.png"> h6</option>
+					<option value="p">p</option>
+					<option value="pre">pre</option>
+				</select><select>
+					<option selected="selected">-font-</option>
+					<option value="Blackadder ITC" style="font-family: &quot;Blackadder ITC&quot;;">Blackadder ITC
+					</option>
+					<option value="Agency FB" style="font-family: &quot;Agency FB&quot;;">Agency FB</option>
+					<option value="Bauhaus 93">Bauhaus 93</option>
+					<option value="Bradley Hand ITC" style="font-family: &quot;Bradley Hand ITC&quot;;">Bradley Hand ITC
+					</option>
+					<option value="Broadway" style="font-family: Broadway;">Broadway</option>
+					<option value="Bodoni MT Poster Compressed"
+						style="font-family: &quot;Bodoni MT Poster Compressed&quot;;">Bodoni MT Poster Compressed
+					</option>
+					<option value="Castellar" style="font-family: Castellar;">Castellar</option>
+					<option value="Chiller" style="font-family: Chiller;">Chiller</option>
+					<option value="Comic Sans MS" style="font-family: &quot;Comic Sans MS&quot;;">Comic Sans MS</option>
+					<option value="Curlz MT" style="font-family: &quot;Curlz MT&quot;;">Curlz MT</option>
+					<option value="Brush Script MT" style="font-family: &quot;Brush Script MT&quot;;">Brush Script MT
+					</option>
+					<option value="Edwardian Script ITC" style="font-family: &quot;Edwardian Script ITC&quot;;">
+						Edwardian Script ITC</option>
+					<option value="Footlight MT Light" style="font-family: &quot;Footlight MT Light&quot;;">Footlight MT
+						Light</option>
+					<option value="Freestyle Script" style="font-family: &quot;Freestyle Script&quot;;">Freestyle Script
+					</option>
+					<option value="French Script MT" style="font-family: &quot;French Script MT&quot;;">French Script MT
+					</option>
+					<option value="Gigi" style="font-family: Gigi;">Gigi</option>
+					<option value="Forte" style="font-family: Forte;">Forte</option>
+					<option value="Gill Sans MT Ext Condensed Bold"
+						style="font-family: &quot;Gill Sans MT Ext Condensed Bold&quot;;">Gill Sans MT Ext Condensed
+						Bold</option>
+					<option value="Haettenschweiler" style="font-family: Haettenschweiler;">Haettenschweiler</option>
+					<option value="Informal Roman" style="font-family: &quot;Informal Roman&quot;;">Informal Roman
+					</option>
+					<option value="Ink Free" style="font-family: &quot;Ink Free&quot;;">Ink Free</option>
+					<option value="Jokerman" style="font-family: Jokerman;">Jokerman</option>
+					<option value="Juice ITC" style="font-family: &quot;Juice ITC&quot;;">Juice ITC</option>
+					<option value="Kunstler Script" style="font-family: &quot;Kunstler Script&quot;;">Kunstler Script
+					</option>
+					<option value="Liberation Mono" style="font-family: &quot;Liberation Mono&quot;;">Liberation Mono
+					</option>
+					<option value="Magneto" style="font-family: Magneto;">Magneto</option>
+					<option value="Matura MT Script Capitals"
+						style="font-family: &quot;Matura MT Script Capitals&quot;;">Matura MT Script Capitals</option>
+					<option value="Mistral" style="font-family: Mistral;">Mistral</option>
+					<option value="Vladimir Script" style="font-family: &quot;Vladimir Script&quot;;">Vladimir Script
+					</option>
+					<option value="Vivaldi" style="font-family: Vivaldi;">Vivaldi</option>
+					<option value="Stencil" style="font-family: Stencil;">Stencil</option>
+					<option value="Playbill" style="font-family: Playbill;">Playbill</option>
+					<option value="American Typewriter" style="font-family: &quot;American Typewriter&quot;;">American
+						Typewriter</option>
+					<option value="Andale Mono" style="font-family: &quot;Andale Mono&quot;;">Andale Mono</option>
+					<option value="Arial" style="font-family: Arial;">Arial</option>
+					<option value="Arial Black" style="font-family: &quot;Arial Black&quot;;">Arial Black</option>
+					<option value="Arial Narrow" style="font-family: &quot;Arial Narrow&quot;;">Arial Narrow</option>
+					<option value="Arial Rounded MT Bold" style="font-family: &quot;Arial Rounded MT Bold&quot;;">Arial
+						Rounded MT Bold</option>
+					<option value="Arial Unicode MS" style="font-family: &quot;Arial Unicode MS&quot;;">Arial Unicode MS
+					</option>
+					<option value="Avenir" style="font-family: Avenir;">Avenir</option>
+					<option value="Avenir Next" style="font-family: &quot;Avenir Next&quot;;">Avenir Next</option>
+					<option value="Avenir Next Condensed" style="font-family: &quot;Avenir Next Condensed&quot;;">Avenir
+						Next Condensed</option>
+					<option value="Baskerville" style="font-family: Baskerville;">Baskerville</option>
+					<option value="Big Caslon" style="font-family: &quot;Big Caslon&quot;;">Big Caslon</option>
+					<option value="Bodoni 72">Bodoni 72</option>
+					<option value="Bodoni 72 Oldstyle">Bodoni 72 Oldstyle</option>
+					<option value="Bodoni 72 Smallcaps">Bodoni 72 Smallcaps</option>
+					<option value="Bradley Hand" style="font-family: &quot;Bradley Hand&quot;;">Bradley Hand</option>
+					<option value="Brush Script MT" style="font-family: &quot;Brush Script MT&quot;;">Brush Script MT
+					</option>
+					<option value="Chalkboard" style="font-family: Chalkboard;">Chalkboard</option>
+					<option value="Chalkboard SE" style="font-family: &quot;Chalkboard SE&quot;;">Chalkboard SE</option>
+					<option value="Chalkduster" style="font-family: Chalkduster;">Chalkduster</option>
+					<option value="Charter" style="font-family: Charter;">Charter</option>
+					<option value="Cochin" style="font-family: Cochin;">Cochin</option>
+					<option value="Comic Sans MS" style="font-family: &quot;Comic Sans MS&quot;;">Comic Sans MS</option>
+					<option value="Copperplate" style="font-family: Copperplate;">Copperplate</option>
+					<option value="Courier" style="font-family: Courier;">Courier</option>
+					<option value="Courier New" style="font-family: &quot;Courier New&quot;;">Courier New</option>
+					<option value="Didot" style="font-family: Didot;">Didot</option>
+					<option value="DIN Alternate" style="font-family: &quot;DIN Alternate&quot;;">DIN Alternate</option>
+					<option value="DIN Condensed" style="font-family: &quot;DIN Condensed&quot;;">DIN Condensed</option>
+					<option value="Futura" style="font-family: Futura;">Futura</option>
+					<option value="Garamond" style="font-family: Garamond;">Garamond</option>
+					<option value="Geneva" style="font-family: Geneva;">Geneva</option>
+					<option value="Georgia" style="font-family: Georgia;">Georgia</option>
+					<option value="Gill Sans" style="font-family: &quot;Gill Sans&quot;;">Gill Sans</option>
+					<option value="Helvetica" style="font-family: Helvetica;">Helvetica</option>
+					<option value="Helvetica Neue" style="font-family: &quot;Helvetica Neue&quot;;">Helvetica Neue
+					</option>
+					<option value="Herculanum" style="font-family: Herculanum;">Herculanum</option>
+					<option value="Hoefler Text" style="font-family: &quot;Hoefler Text&quot;;">Hoefler Text</option>
+					<option value="Impact" style="font-family: Impact;">Impact</option>
+					<option value="Lucida Grande" style="font-family: &quot;Lucida Grande&quot;;">Lucida Grande</option>
+					<option value="Lucida Console" style="font-family: &quot;Lucida Console&quot;;">Lucida Console
+					</option>
+					<option value="Lucida Handwriting" style="font-family: &quot;Lucida Handwriting&quot;;">Lucida
+						Handwriting</option>
+					<option value="Luminari" style="font-family: Luminari;">Luminari</option>
+					<option value="Marker Felt" style="font-family: &quot;Marker Felt&quot;;">Marker Felt</option>
+					<option value="Menlo" style="font-family: Menlo;">Menlo</option>
+					<option value="Microsoft Sans Serif" style="font-family: &quot;Microsoft Sans Serif&quot;;">
+						Microsoft Sans Serif</option>
+					<option value="Monaco" style="font-family: Monaco;">Monaco</option>
+					<option value="Noteworthy" style="font-family: Noteworthy;">Noteworthy</option>
+					<option value="Optima" style="font-family: Optima;">Optima</option>
+					<option value="Palatino" style="font-family: Palatino;">Palatino</option>
+					<option value="Papyrus" style="font-family: Papyrus;">Papyrus</option>
+					<option value="Phosphate" style="font-family: Phosphate;">Phosphate</option>
+					<option value="Rockwell" style="font-family: Rockwell;">Rockwell</option>
+					<option value="Savoye LET" style="font-family: &quot;Savoye LET&quot;;">Savoye LET</option>
+					<option value="SignPainter" style="font-family: SignPainter;">SignPainter</option>
+					<option value="Skia" style="font-family: Skia;">Skia</option>
+					<option value="Snell Roundhand" style="font-family: &quot;Snell Roundhand&quot;;">Snell Roundhand
+					</option>
+					<option value="Tahoma" style="font-family: Tahoma;">Tahoma</option>
+					<option value="Times" style="font-family: Times;">Times</option>
+					<option value="Times New Roman" style="font-family: &quot;Times New Roman&quot;;">Times New Roman
+					</option>
+					<option value="Trattatello" style="font-family: Trattatello;">Trattatello</option>
+					<option value="Trebuchet MS" style="font-family: &quot;Trebuchet MS&quot;;">Trebuchet MS</option>
+					<option value="Verdana" style="font-family: Verdana;">Verdana</option>
+					<option value="Zapfino" style="font-family: Zapfino;">Zapfino</option>
+				</select>Size:<select>
+					<option selected="selected">-size-</option>
+					<option value="0">Very small</option>
+					<option value="1">Small</option>
+					<option value="2">Normal</option>
+					<option value="3">Medium</option>
+					<option value="4">Big</option>
+					<option value="5">Very big</option>
+					<option value="6">Maximum</option>
+				</select>Fg: <input type="color">
+				<a href="#" class="btn" title="Insert Image"><img src="../images/icons/color_wheel.png"></a>
+				<select>
+					<option selected="selected">-color-</option>
+					<option value="red" style="color: red;">red</option>
+					<option value="green" style="color: green;">green</option>
+					<option value="blue" style="color: blue;">blue</option>
+					<option value="black" style="color: black;">black</option>
+					<option value="gray" style="color: gray;">gray</option>
+					<option value="white" style="color: white;">white</option>
+					<option value="silver" style="color: silver;">silver</option>
+					<option value="maroon" style="color: maroon;">maroon</option>
+					<option value="yellow" style="color: yellow;">yellow</option>
+					<option value="olive" style="color: olive;">olive</option>
+					<option value="lime" style="color: lime;">lime</option>
+					<option value="aqua" style="color: aqua;">aqua</option>
+					<option value="teal" style="color: teal;">teal</option>
+					<option value="navy" style="color: navy;">navy</option>
+					<option value="fuchsia" style="color: fuchsia;">fuchsia</option>
+					<option value="purple" style="color: purple;">purple</option>
+				</select>Bg:<input type="color" style="display: none">
+				<a href="#" class="btn" title="Insert Image"><img src="../images/color_1.png"></a>
+				<select>
+					<option selected="selected">-color-</option>
+					<option value="red" style="background-color: red;">red</option>
+					<option value="green" style="background-color: green;">green</option>
+					<option value="blue" style="background-color: blue;">blue</option>
+					<option value="black" style="background-color: black;">black</option>
+					<option value="gray" style="background-color: gray;">gray</option>
+					<option value="white" style="background-color: white;">white</option>
+					<option value="silver" style="background-color: silver;">silver</option>
+					<option value="maroon" style="background-color: maroon;">maroon</option>
+					<option value="yellow" style="background-color: yellow;">yellow</option>
+					<option value="olive" style="background-color: olive;">olive</option>
+					<option value="lime" style="background-color: lime;">lime</option>
+					<option value="aqua" style="background-color: aqua;">aqua</option>
+					<option value="teal" style="background-color: teal;">teal</option>
+					<option value="navy" style="background-color: navy;">navy</option>
+					<option value="fuchsia" style="background-color: fuchsia;">fuchsia</option>
+					<option value="purple" style="background-color: purple;">purple</option>
+				</select></div>
+			<div class="btn-group">
+				<a href="#" class="btn" title="Save"><img src="../images/icons/disk.png"></a>
+				<a href="#" class="btn" title="Print"><img src="../images/icons/printer.png"></a>
+				<a href="#" class="btn" title="Undo"><img src="../images/icons/arrow_undo.png"></a>
+				<a href="#" class="btn" title="Redo"><img src="../images/icons/arrow_redo.png"></a>
+				<a href="#" class="btn" title="Remove formatting"><img src="../images/icons/font_delete.png"></a>
+				<a href="#" class="btn" title="Clean"><img src="../images/icons/page_white_delete.png"></a>
+			</div>
+			<div class="btn-group">
+				<a href="#" class="btn" title="italic"><img src="../images/icons/text_italic.png"></a>
+				<a href="#" class="btn" title="bold"><img src="../images/icons/text_bold.png"></a>
+				<a href="#" class="btn" title="underline"><img src="../images/icons/text_underline.png"></a>
+				<a href="#" class="btn" title="strikethrough"><img src="../images/icons/text_strikethrough.png"></a>
+				<a href="#" class="btn" title="subscript"><img src="../images/icons/text_subscript.png"></a>
+				<a href="#" class="btn" title="superscript"><img src="../images/icons/text_superscript.png"></a>
+			</div>
+			<div class="btn-group">
+				<a href="#" class="btn" title="allcaps"><img src="../images/icons/text_allcaps.png"></a>
+				<a href="#" class="btn" title="smallcaps"><img src="../images/icons/text_smallcaps.png"></a>
+				<a href="#" class="btn" title="dropcaps"><img src="../images/icons/text_dropcaps.png"></a>
+				<a href="#" class="btn" title="replace"><img src="../images/icons/text_replace.png"></a>
+				<a href="#" class="btn" title="lowercase"><img src="../images/icons/text_lowercase.png"></a>
+				<a href="#" class="btn" title="uppercase"><img src="../images/icons/text_uppercase.png"></a>
+			</div>
+			<div class="btn-group">
+				<a href="#" class="btn" title="letter_omega"><img src="../images/icons/text_letter_omega.png"></a>
+				<a href="#" class="btn" title="list_bullets"><img src="../images/icons/text_list_bullets.png"></a>
+				<a href="#" class="btn" title="list_numbers"><img src="../images/icons/text_list_numbers.png"></a>
+				<a href="#" class="btn" title="kerning"><img src="../images/icons/text_kerning.png"></a>
+				<a href="#" class="btn" title="signature"><img src="../images/icons/text_signature.png"></a>
+				<a href="#" class="btn" title="Hyperlink"><img src="../images/icons/link.png"></a>
+				<a href="#" class="btn ii" title="Insert Image"><img src="../images/insert_image_12.png"></a>
+			</div>
+			<div class="btn-group">
+				<a href="#" class="btn" title="heading_1"><img src="../images/icons/text_heading_1.png"></a>
+				<a href="#" class="btn" title="heading_2"><img src="../images/icons/text_heading_2.png"></a>
+				<a href="#" class="btn" title="heading_3"><img src="../images/icons/text_heading_3.png"></a>
+				<a href="#" class="btn" title="heading_4"><img src="../images/icons/text_heading_4.png"></a>
+				<a href="#" class="btn" title="heading_5"><img src="../images/icons/text_heading_5.png"></a>
+				<a href="#" class="btn" title="heading_6"><img src="../images/icons/text_heading_6.png"></a>
+			</div>
+			<div class="btn-group">
+				<a href="#" class="btn" title="indent"><img src="../images/icons/text_indent.png"></a>
+				<a href="#" class="btn" title="indent_remove"><img src="../images/icons/text_indent_remove.png"></a>
+				<a href="#" class="btn" title="align_left"><img src="../images/icons/text_align_left.png"></a>
+				<a href="#" class="btn" title="align_center"><img src="../images/icons/text_align_center.png"></a>
+				<a href="#" class="btn" title="align_right"><img src="../images/icons/text_align_right.png"></a>
+				<a href="#" class="btn" title="align_justify"><img src="../images/icons/text_align_justify.png"></a>
+				<a href="#" class="btn" title="padding_top"><img src="../images/icons/text_padding_top.png"></a>
+				<a href="#" class="btn" title="padding_bottom"><img src="../images/icons/text_padding_bottom.png"></a>
+				<a href="#" class="btn" title="padding_left"><img src="../images/icons/text_padding_left.png"></a>
+				<a href="#" class="btn" title="padding_right"><img src="../images/icons/text_padding_right.png"></a>
+				<a href="#" class="btn" title="columns"><img src="../images/icons/text_columns.png"></a>
+				<a href="#" class="btn" title="linespacing"><img src="../images/icons/text_linespacing.png"></a>
+				<a href="#" class="btn" title="letterspacing"><img src="../images/icons/text_letterspacing.png"></a>
+				<a href="#" class="btn" title="horizontalrule"><img src="../images/icons/text_horizontalrule.png"></a>
+			</div>
+			<div class="btn-group">
+				<a href="#" class="btn" title="Cut"><img src="../images/icons/cut.png"></a>
+				<a href="#" class="btn" title="Copy"><img src="../images/icons/page_copy.png"></a>
+				<a href="#" class="btn" title="Pase"><img src="../images/icons/paste_plain.png"></a>
+				<a href="#" class="btn" title="Code"><img src="../images/icons/page_white_code.png"></a>
+			</div>
+		</div>
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="../js/Modal.js"></script>
+	<script>
+		let im = new Modal();
+		$("body").append(im.modal);
+		$("a.ii").click(function() {
+			im.start();
+		});
+	</script>
+</body>
+
+</html>

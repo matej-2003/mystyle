@@ -1,0 +1,127 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+	/* IBC - input border color */
+    --ibc: rgb(128, 189, 255);
+    --ibc-shadow: rgba(128, 189, 255, 0.3);
+	--valid-ibc: rgb(40, 167, 69);
+    --valid-ibc-shadow: rgba(40, 167, 69, 0.3);
+	--invalid-ibc: rgb(240, 60, 78);
+    --invalid-ibc-shadow: rgba(240, 60, 78, 0.3);
+}
+
+.l {
+    text-align: left;
+}
+
+.r {
+    text-align: right;
+}
+
+.c {
+    text-align: center;
+}
+
+.box {
+    display: grid;
+    grid-row-gap: 1em;
+    grid-template-rows: max-content max-content;
+    text-align: left;
+}
+
+.lbox {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: auto max-content;
+    padding: 1em;
+}
+
+.rbox {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: max-content auto;
+    padding: 1em;
+}
+/* nested orderd list */
+
+.nl ol {
+    counter-reset: item;
+}
+
+.nl li {
+    display: block;
+}
+
+.nl li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+}
+
+
+.pill {
+    font-weight: bold;
+    padding: 0.1em 0.2em;
+    border-radius: 2px;
+    color: #ffffff;
+    user-select: none;
+}
+
+
+/* nested orderd list */
+
+.nl ol {
+    counter-reset: item;
+}
+
+.nl li {
+    display: block;
+}
+
+.nl li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+}
+
+
+
+
+
+.pagination {
+    padding-top: 2em;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.pagination a {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.pagination a:hover {
+    background-color: rgba(1, 124, 255, 0.487);
+}
+
+.pagination a.current {
+    font-weight: bold;
+    background-color: rgba(1, 124, 255, 0.487);
+}

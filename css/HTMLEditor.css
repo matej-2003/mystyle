@@ -1,0 +1,63 @@
+/* HTML editor */
+
+.html_editor {
+    text-align: left;
+    /* width: 40em; */
+    padding: 1em;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+}
+
+.html_editor select:focus-visible {
+    outline: #ddd;
+}
+
+.html_editor select {
+	width: max-content;
+}
+
+.textbox {
+    display: block;
+    /* width: 100%; */
+    min-height: 10em;
+    max-height: max-content;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    padding: 0.2em;
+    overflow: auto;
+    resize: vertical;
+    /* do not delete this */
+    /* border-radius: 0.1rem; */
+    margin: 0.4em 0em;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.textbox:focus {
+    border-color: var(--ibc);
+    /* outline: 0; */
+    outline: none;
+    box-shadow: 0 0 0 0.2rem var(--ibc-shadow);
+}
+
+.code_textarea {
+	margin: 0.4em 0em;
+	min-height: 10em;
+}
+
+.toolbar {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+	align-items: center;
+	justify-content: flex-start;
+    /* background: #eee; */
+}
+
+a.btn {
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    width: 2.5em;
+}

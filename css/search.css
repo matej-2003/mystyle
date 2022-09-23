@@ -1,0 +1,31 @@
+.search_sector {
+    display: block;
+    grid-area: search;
+    display: grid;
+    font-size: medium;
+    grid-template-columns: max-content max-content;
+    text-align: left;
+    grid-column-gap: 0.5em;
+}
+
+.result_count {
+    padding-top: 0.5em;
+}
+
+.search_results {
+    padding-top: 1em;
+}
+
+.search_result {
+    padding-top: 1em;
+    border-bottom: gray;
+}
+
+.result_title {
+    font-size: large;
+}
+
+.result_link {
+    font-size: medium;
+    color: rgb(0, 102, 33);
+}

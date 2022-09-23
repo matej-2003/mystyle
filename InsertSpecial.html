@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/input.css">
+	<link rel="stylesheet" href="./css/btn.css">
+	<style>
+		.insert_symbol {
+			background: #eee;
+			padding: 0.5em;
+			border-radius: 0.2em;
+			width: 39em
+		}
+
+		.toolbar {
+			padding-bottom: 0.5em;
+			border-bottom: 1px solid #999;
+		}
+
+		.selector {
+			padding-top: 0.5em;
+			display: grid;
+			grid-template-columns: auto max-content;
+		}
+
+		.symbol_list {
+			display: inline-flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-content: start;
+			justify-content: start;
+			gap: 0.1em;
+			padding: 0em 0.2em;
+		}
+
+		.selector .symbol_list {
+			max-height: 14em;
+			overflow-y: auto;
+		}
+
+		.symbol {
+			width: 1.5em;
+			height: 1.5em;
+			background-color: #ddd;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			user-select: none;
+		}
+
+		.selector {
+			padding-bottom: 0.5em;
+			border-bottom: 1px solid #999;
+		}
+
+		.preview input {
+			width: 5rem;
+		}
+
+		.preview {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			border-left: 1px solid #999;
+			padding-left: 0.5em;
+		}
+
+		.preview .selected_symbol {
+			width: 5rem;
+			height: 5rem;
+			font-size: 4rem;
+			background-color: #ddd;
+			border: 1px solid #aaa;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.other {
+			padding-top: 0.5em;
+		}
+
+		.buttons {
+			text-align: end;
+		}
+
+		.symbol:hover {
+			background-color: #aeb3ff;
+		}
+
+		.symbol:active {
+			background-color: #2563ff;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="insert_symbol">
+		<div class="toolbar">
+			<table>
+				<tr>
+					<td>Search</td>
+					<td>Font</td>
+					<td>Subset</td>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td>
+						<select name="">
+							<option value="">font 1</option>
+							<option value="">font 2</option>
+							<option value="">font 3</option>
+							<option value="">font 4</option>
+						</select>
+					</td>
+					<td>
+						<select name="">
+							<option value="">set 1</option>
+							<option value="">set 2</option>
+							<option value="">set 3</option>
+							<option value="">set 4</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="selector">
+			<div class="symbol_list">
+				<div class="symbol">&#8706;</div>
+			</div>
+			<div class="preview">
+				<div class="selected_symbol">&#8706;</div>
+				<span>Testing</span>
+				<table>
+					<tr>
+						<td>Hexadecimal</td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<td>Decimal</td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<button class="btn">Favorite</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="other">
+			<table>
+				<tr>
+					<td>Recent:</td>
+					<td>
+						<div class="symbol_list">
+							<div class="symbol">&#8706;</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Favorite:</td>
+					<td>
+						<div class="symbol_list">
+							<div class="symbol">&#8706;</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<div class="buttons">
+				<button class="btn">Cancel</button> <button class="btn">Insert</button>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script>
+		let list = $('div.selector div.symbol_list');
+		for (let i=8704; i<8959; i++) {
+			list.append(
+				$('<div></div>').addClass('symbol').html(`&#${i};`)
+			);
+		}
+	</script>
+</body>
+
+</html>

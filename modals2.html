@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/btn.css">
+	<link rel="stylesheet" href="./css/input.css">
+	<link rel="stylesheet" href="./css/MultipleSelect.css">
+	<link rel="stylesheet" href="./css/modal.css">
+	<title>Document</title>
+</head>
+<body>
+	<button for="myModal" class="btn">Open Modal</button>
+
+	<div id="myModal" class="modal">
+		<div class="modal_content">
+			<div class="modal_header">
+				<h2>Modal Header</h2>
+			</div>
+			<div class="modal_body">
+				<select class="multiple_select" multiple data-left_header="All premissions" data-right_header="Current premissions">
+					<option selected>Read files</option>
+					<option selected>Write files</option>
+					<option selected>Execute files</option>
+					<option selected>Read folders</option>
+					<option selected>Write folders</option>
+					<option selected>Execute folders</option>
+					<option>Create users</option>
+					<option>Delete users</option>
+					<option>Edit users</option>
+					<option>Grant premissions</option>
+				</select>
+			</div>
+			<div class="modal_footer">
+				<h3>Modal Footer</h3>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="./js/MultipleSelect.js"></script>
+	<script src="./js/Modal.js"></script>
+</body>
+</html>

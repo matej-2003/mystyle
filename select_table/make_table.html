@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+        }
+
+        td,
+        tr {
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 5px;
+        }
+        
+        table.selectable tr.selected {
+            background-color: #e3e9ff;
+        }
+
+        table.selectable tr:not(.toolbar):hover {
+            background-color: #d3dbff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toolbar" for="table1"></div>
+    <script src="./selectable_table.js"></script>
+    <script>
+        const table_data = [
+            [1, 'Grand Hotel New York', 100.00],
+            [2, 'Geneva Hotel Contnetal', 250.00],
+            [3, 'Modern villa outside London', 120.00],
+            [4, 'Gold', 100.00],
+            [5, 'Palladium', 100.00],
+            [6, 'Copper', 8.00],
+            [7, 'Aluminium', 8.00],
+            [8, 'Greywacke Statue Tribute to Isis', 6000.00],
+            [9, 'Napoleon\'s Gold-Encrusted Sword', 500.00],
+            [10, 'Starry Night', 800.00],
+            [11, 'Guernica', 800.00],
+        ];
+
+        function row_(datum) {
+            let row = ce('tr');
+
+            let checkbox = ce('input', {'type': 'checkbox', 'name': datum[0]});
+            let chk_row = row.insertCell(-1);
+            chk_row.append(checkbox);
+
+            let name = row.insertCell(-1);
+            name.innerHTML = datum[1];
+            let price = row.insertCell(-1);
+            price.innerHTML = `$${datum[2]}`;
+
+            return new Row(row, checkbox);
+        }
+
+        let tb = ce('table');
+        let tbr = tb.insertRow(0);
+        let ul = ce('ul');
+        tbr.insertCell(0).append(ul);
+        let full_price = tbr.insertCell(0);
+
+        function update() {
+            ul.innerHTML = '';
+            full_price.innerHTML = '$0';
+            let fp = 0;
+            for (let row of st.rows) {
+                if (row.checkbox.checked) {
+                    let li = ce('li');
+                    li.innerHTML = `${row.html.cells[1].innerHTML}`;
+                    ul.append(li);
+
+                    fp += parseFloat(row.html.cells[2].innerHTML.replace('$', ''));
+                }
+            }
+
+            full_price.innerHTML = `$${fp}`;
+        }
+
+        let st = new SelectableTable(
+            data=table_data,
+            make_row=row_,
+            on_click=update,
+            on_all=update,
+            on_clear=update,
+            on_toggle=update,
+        );
+        document.body.append(st.table);
+        document.body.append(tb);
+    </script>
+</body>
+
+</html>

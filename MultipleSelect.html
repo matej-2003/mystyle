@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/btn.css">
+	<link rel="stylesheet" href="./css/input.css">
+	<link rel="stylesheet" href="./css/MultipleSelect.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="content">
+	</div>
+
+	<select class="multiple_select" multiple>
+		<option selected>Lorem.</option>
+		<option>Beatae.</option>
+		<option>Veritatis.</option>
+		<option selected>Voluptatum?</option>
+		<option>Assumenda.</option>
+	</select>
+
+	<select class="multiple_select" multiple data-left_header="All premissions" data-right_header="Current premissions">
+		<option selected>Read files</option>
+		<option selected>Write files</option>
+		<option selected>Execute files</option>
+		<option selected>Read folders</option>
+		<option selected>Write folders</option>
+		<option selected>Execute folders</option>
+		<option>Create users</option>
+		<option>Delete users</option>
+		<option>Edit users</option>
+		<option>Grant premissions</option>
+	</select>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="./js/MultipleSelect.js"></script>
+	<script>
+		let ms = new MultipleSelect(
+			["1", "2", "3"],
+			["a", "b"],
+		);
+
+		let ms1 = new MultipleSelect(
+			["Liam", "Noah", "Oliver", "Elijah", "James", "William", "Levi", "Alexander", "Jackson"],
+			["Benjamin", "Lucas", "Henry", "Theodore", "Jack"],
+			"All users",
+			"Members of the Group"
+		);
+
+		$("div.content").append(ms.html, ms1.html);
+	</script>
+</body>
+
+</html>
