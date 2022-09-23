@@ -78,7 +78,7 @@ class InsertSpecial {
 			this.font.append($(`<option>${font}</option>`));
 		}
 
-		$.getJSON('/js/symbols.json', (data) => {
+		$.getJSON('./js/symbols.json', (data) => {
 			this.symbol_data = data;
 			for (let subset of Object.keys(this.symbol_data)) {
 				this.subset.append($(`<option>${subset}</option>`).val(subset));
