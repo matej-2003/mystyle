@@ -114,32 +114,32 @@ class HTMLEditor {
 
 		const toolbar2_layout = [
 			[
-				['Clear', '../images/icons/page_white_delete.png', () => { this.format('delete'); this.ism.html('') }],
-				['Rndo', '../images/icons/arrow_undo.png', () => { this.format('undo') }],
-				['Redo', '../images/icons/arrow_redo.png', () => { this.format('redo') }],
-				['Remove formatting', '../images/icons/font_delete.png', () => { this.format('removeFormat') }],
+				['Clear', './images/icons/page_white_delete.png', () => { this.format('delete'); this.ism.html('') }],
+				['Rndo', './images/icons/arrow_undo.png', () => { this.format('undo') }],
+				['Redo', './images/icons/arrow_redo.png', () => { this.format('redo') }],
+				['Remove formatting', './images/icons/font_delete.png', () => { this.format('removeFormat') }],
 			],
 			[
-				['Bold', '../images/icons/text_bold.png', () => { this.format('bold') }],
-				['Italic', '../images/icons/text_italic.png', () => { this.format('italic') }],
-				['Underline', '../images/icons/text_underline.png', () => { this.format('underline') }],
-				['Strike through', '../images/icons/text_strikethrough.png', () => { this.format('strikethrough') }],
-				['Sub script', '../images/icons/text_subscript.png', () => { this.format('subscript') }],
-				['Super script', '../images/icons/text_superscript.png', () => { this.format('superscript') }],
+				['Bold', './images/icons/text_bold.png', () => { this.format('bold') }],
+				['Italic', './images/icons/text_italic.png', () => { this.format('italic') }],
+				['Underline', './images/icons/text_underline.png', () => { this.format('underline') }],
+				['Strike through', './images/icons/text_strikethrough.png', () => { this.format('strikethrough') }],
+				['Sub script', './images/icons/text_subscript.png', () => { this.format('subscript') }],
+				['Super script', './images/icons/text_superscript.png', () => { this.format('superscript') }],
 			],
 			[
-				['Left align', '../images/icons/text_align_left.png', () => { this.format('justifyleft') }],
-				['Center align', '../images/icons/text_align_center.png', () => { this.format('justifycenter') }],
-				['Right align', '../images/icons/text_align_right.png', () => { this.format('justifyright') }],
-				['Dotted list', '../images/icons/text_list_bullets.png', () => { this.format('insertunorderedlist') }],
-				['Numbered list', '../images/icons/text_list_numbers.png', () => { this.format('insertorderedlist') }],
-				['Add indentation', '../images/icons/text_indent.png', () => { this.format('indent') }],
-				['Delete indentation', '../images/icons/text_indent_remove.png', () => { this.format('outdent') }],
+				['Left align', './images/icons/text_align_left.png', () => { this.format('justifyleft') }],
+				['Center align', './images/icons/text_align_center.png', () => { this.format('justifycenter') }],
+				['Right align', './images/icons/text_align_right.png', () => { this.format('justifyright') }],
+				['Dotted list', './images/icons/text_list_bullets.png', () => { this.format('insertunorderedlist') }],
+				['Numbered list', './images/icons/text_list_numbers.png', () => { this.format('insertorderedlist') }],
+				['Add indentation', './images/icons/text_indent.png', () => { this.format('indent') }],
+				['Delete indentation', './images/icons/text_indent_remove.png', () => { this.format('outdent') }],
 			],
 			[
-				['Cut', '../images/icons/cut.png', () => { this.format('cut') }],
-				['Copy', '../images/icons/page_copy.png', () => { this.format('copy') }],
-				['Paste', '../images/icons/paste_plain.png', () => { this.format('paste') }],
+				['Cut', './images/icons/cut.png', () => { this.format('cut') }],
+				['Copy', './images/icons/page_copy.png', () => { this.format('copy') }],
+				['Paste', './images/icons/paste_plain.png', () => { this.format('paste') }],
 			]
 		];
 
@@ -157,10 +157,10 @@ class HTMLEditor {
 
 		let btngrp = $('<div></div>').addClass('btn-group');
 
-		this.link_btn = $('<a></a>').attr({ 'href': '#', 'title': 'Insert link' }).addClass('btn').append($('<img>').attr('src', '../images/icons/link.png'));
-		this.symbol_selector_btn = $('<a></a>').attr({ 'href': '#', 'title': 'Insert symbol' }).addClass('btn').append($('<img>').attr('src', '../images/icons/text_letter_omega.png'));
-		this.image_btn = $('<a></a>').attr({ 'href': '#', 'title': 'Insert image' }).addClass('btn').append($('<img>').attr('src', '../images/icons/insert_image.png'));
-		this.html_btn = $('<a></a>').attr({ 'href': '#', 'title': 'HTML' }).addClass('btn html').append($('<img>').attr('src', '../images/icons/page_white_code.png'));
+		this.link_btn = $('<a></a>').attr({ 'href': '#', 'title': 'Insert link' }).addClass('btn').append($('<img>').attr('src', './images/icons/link.png'));
+		this.symbol_selector_btn = $('<a></a>').attr({ 'href': '#', 'title': 'Insert symbol' }).addClass('btn').append($('<img>').attr('src', './images/icons/text_letter_omega.png'));
+		this.image_btn = $('<a></a>').attr({ 'href': '#', 'title': 'Insert image' }).addClass('btn').append($('<img>').attr('src', './images/icons/insert_image.png'));
+		this.html_btn = $('<a></a>').attr({ 'href': '#', 'title': 'HTML' }).addClass('btn html').append($('<img>').attr('src', './images/icons/page_white_code.png'));
 		
 		btngrp.append(
 			this.link_btn,
