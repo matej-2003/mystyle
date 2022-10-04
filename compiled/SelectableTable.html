@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.min.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="toolbar" for="table1"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="./script.min.js"></script>
+	<script>
+		const table_data = [
+			[1 , 'Grand Hotel New York',				100.00 ],
+			[2 , 'Geneva Hotel Contnetal',				250.00 ],
+			[3 , 'Modern villa outside London',			120.00 ],
+			[4 , 'Gold',								100.00 ],
+			[5 , 'Palladium',							100.00 ],
+			[6 , 'Copper',								8.00   ],
+			[7 , 'Aluminium',							8.00   ],
+			[8 , 'Greywacke Statue Tribute to Isis',	6000.00],
+			[9 , 'Napoleon\'s Gold-Encrusted Sword',	500.00 ],
+			[10, 'Starry Night',						800.00 ],
+			[11, 'Guernica',							800.00 ],
+		];
+
+		function row_(datum) {
+			let checkbox = $('<input>').attr({'type': 'checkbox', 'name': datum[0]});
+			let row = $('<tr></tr>').append(
+				$('<td></td>').append(checkbox),
+				$('<td></td>').html(datum[1]),
+				$('<td></td>').html(`$${datum[2]}`),
+			);
+			return new Row(row, checkbox);
+		}
+
+		let full_price = $('<td></td>');
+		let ul = $('<ul></ul>');
+		let tb = $('<table></table>').append(
+			$('<tr></tr>').append(ul, full_price),
+		);
+
+		function update() {
+			ul.html('')
+			full_price.html('$0');
+			let fp = 0;
+			for (let row of st.rows) {
+				if (row.checkbox.checked) {
+					let li = $('<li></li>');
+					li.html(`${row.html.cells[1].html()}`);
+					ul.append(li);
+					fp += parseFloat(row.html.cells[2].html().replace('$', ''));
+				}
+			}
+
+			full_price.html(`$${fp}`);
+		}
+
+		let st = new SelectableTable(
+			data      = table_data,
+			make_row  = row_,
+			on_click  = update,
+			on_all    = update,
+			on_toggle = update,
+			on_clear  = update,
+		);
+
+		$('body').append(st.table, tb);
+	</script>
+</body>
+
+</html>

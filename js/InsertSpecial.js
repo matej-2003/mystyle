@@ -18,9 +18,7 @@ class InsertSpecial {
 		this.symbol_data       = {};
 		this.data_loded        = false;
 		this.selected_data     = [];
-		this.all = [
-			[8216, "Left single quotation mark"]
-		];
+		this.all               = [];
 
 		this.html = $('<div></div>').addClass('insert_symbol').append(
 			$('<div></div>').addClass('toolbar').append(
@@ -78,12 +76,14 @@ class InsertSpecial {
 			this.font.append($(`<option>${font}</option>`));
 		}
 
-		$.getJSON('./js/symbols.json', (data) => {
+		// $.getJSON('./js/symbols.json', (data) => {
+		$.getJSON('./js/new_symbols.json', (data) => {
 			this.symbol_data = data;
 			for (let subset of Object.keys(this.symbol_data)) {
 				this.subset.append($(`<option>${subset}</option>`).val(subset));
 			}
-			this.load_symbols(this.symbol_data['general']);
+			this.load_symbols(this.symbol_data[Object.keys(this.symbol_data)[0]]);
+			this.all = [].concat(...Object.values(this.symbol_data));
 		});
 
 		this.insert_btn.click(() => {
@@ -110,8 +110,10 @@ class InsertSpecial {
 			if (sq) {
 				let results = this.all.filter(([n, info]) => info.toLowerCase().includes(sq));
 				this.load_symbols(results);
-				console.log(results);
-			} else this.symbol_list.html('');
+			} else {
+				this.symbol_list.html('');
+				this.load_symbols(this.symbol_data[this.subset.val()]);
+			}
 		});
 	}
 

@@ -63,6 +63,28 @@ tr.data_row input[type="checkbox"] {
 	margin: .3em;
 }
 
+table.selectable {
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+}
+
+table.selectable td,
+table.selectable tr {
+	border: 1px solid #ddd;
+}
+
+table.selectable td {
+	padding: 5px;
+}
+
+table.selectable tr.selected {
+	background-color: #e3e9ff;
+}
+
+table.selectable tr:not(.toolbar):hover {
+	background-color: #d3dbff;
+}
+
 /* 
 table {
     font-family: arial, sans-serif;

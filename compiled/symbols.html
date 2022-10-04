@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="symbols"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script>
+		let s = $('div.symbols');
+		let table = $('<table></table>');
+		let row = $('<tr></tr>');
+
+		let range = [
+			[30,	2070],
+			[2310,	6690],
+			[7380,	11160],
+			[12270,	12330],
+			[12780,	13020],
+			[42150,	42630],
+			[65040,	65490],
+		];
+
+		for (let [min, max] of range) {
+			for (let i=min; i<max; i++) {
+				let td = $('<td></td>');
+				if (i % 50 == 0) {
+					row = $('<tr></tr>').append($(`<td>${i}</td>`));
+					table.append(row);
+				}
+				td.append(`&#${i};`)
+				row.append(td);
+			}
+		}
+		
+
+		s.append(table);
+	</script>
+</body>
+</html>
